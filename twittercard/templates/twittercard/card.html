@@ -1,0 +1,8 @@
+{% if type %}<meta name="twitter:card" content="{{ type }}">{% endif %}
+{% if site %}<meta name="twitter:site" content="{{ site }}">{% endif %}
+{% if site_id %}<meta name="twitter:site:id" content="{{ site_id }}">{% endif %}
+{% if creator %}<meta name="twitter:creator" content="{{ creator }}">{% endif %}
+{% if url %}<meta name="twitter:url" content="{{ url }}">{% endif %}
+{% if title %}<meta property="twitter:title" content="{{ title|striptags|escape|slice:'70' }}"/>{% endif %}
+{% if description %}<meta name="twitter:description" content="{{ description|striptags|escape|slice:'200' }}">{% endif %}
+{% if image %}<meta property="twitter:image" content="{{ image }}"/>{% endif %}
