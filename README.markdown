@@ -14,24 +14,28 @@ Adds HTML Meta tags for Twitter Card support.
 1. Add `twittercard` to your settings.py INSTALLED_APPS list
 2. Define the following settings in settings.py.  Refer to the [Twitter Card Docs](https://dev.twitter.com/docs/cards) for help regarding [card and content attribution](https://dev.twitter.com/docs/cards#content).
 
-    TWITTERCARD_SITE = '@foo'
-    TWITTERCARD_SITE_ID = 'foo'
-    TWITTERCARD_CREATOR = '@bar'
-    TWITTERCARD_CREATOR_ID = 'bar'
+```python
+TWITTERCARD_SITE = '@foo'
+TWITTERCARD_SITE_ID = 'foo'
+TWITTERCARD_CREATOR = '@bar'
+TWITTERCARD_CREATOR_ID = 'bar'
+```
 
 2. Load the `twittercard` custom tags
 3. Call the `twittercard` tag, passing in the appropriate parameters
 
-    {% load twittercard %}
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="utf-8">
-            <title>Django TwitterCard Example</title>
-            {% twittercard title="Testing" description="Foobar" %}
-        </head>
-        <body></body>
-    </html>
+```html
+{% load twittercard %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Django TwitterCard Example</title>
+        {% twittercard title="Testing" description="Foobar" %}
+    </head>
+    <body></body>
+</html>
+```
 
 ## Available `twittercard` parameters:
 
