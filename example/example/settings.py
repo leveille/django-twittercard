@@ -115,7 +115,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'twittercard',
     'example'
-
 )
 
 # A sample logging configuration. The only tangible logging
@@ -149,5 +148,6 @@ LOGGING = {
 
 # https://dev.twitter.com/docs/cards
 TWITTERCARD_SITE = '@jleveille'
-TWITTERCARD_SITE_ID = '12345'
+TWITTERCARD_SITE_ID = 'jleveille'
 TWITTERCARD_CREATOR = '@jleveille'
+TWITTERCARD_CREATOR_ID = 'jleveille'
