@@ -26,9 +26,9 @@ TWITTERCARD_CONFIG = {
 ```
 
 * `SITE` __Not Required__: @username for the website used in the card footer.
-* `SITE_ID` (**Not Required**): Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.
-* `CREATOR` (**Not Required**): @username for the content creator / author.
-* `CREATOR_ID` (**Not Required**): Same as twitter:creator, but the Twitter user's ID.
+* `SITE_ID` __Not Required__: Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.
+* `CREATOR` __Not Required__: @username for the content creator / author.
+* `CREATOR_ID` __Not Required__: Same as twitter:creator, but the Twitter user's ID.
 
 2. Load the `twittercard` custom tags
 3. Call the `twittercard` tag, passing in the appropriate parameters
@@ -67,7 +67,7 @@ The summary card can be used for many kinds of web content, from blog posts and 
 {% twittercard card="summary" site="" site_id="" creator="" creator_id="" url="" title="" description="" image="" %}
 ```
 
-* `card` (**Optional**): Defaults to summary
+* `card` (__optional__): Defaults to summary
 
 * `site` (**Optional**): @username for the website used in the card footer.  Will default to `TWITTERCARD_CONFIG` if supplied.
 
