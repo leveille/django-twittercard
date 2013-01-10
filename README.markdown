@@ -25,7 +25,7 @@ TWITTERCARD_CONFIG = {
 }
 ```
 
-* `SITE` (**Not Required**): @username for the website used in the card footer.
+* `SITE` __Not Required__: @username for the website used in the card footer.
 * `SITE_ID` (**Not Required**): Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.
 * `CREATOR` (**Not Required**): @username for the content creator / author.
 * `CREATOR_ID` (**Not Required**): Same as twitter:creator, but the Twitter user's ID.
