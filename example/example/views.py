@@ -1,7 +1,14 @@
 from django.views.generic.base import TemplateView
 
 class HomePageView(TemplateView):
-    template_name = "base.html"
+    template_name = "home.html"
     def get_context_data(self, **kwargs):
         context = super(HomePageView, self).get_context_data(**kwargs)
+        return context
+
+
+class SubPageView(TemplateView):
+    template_name = "sub.html"
+    def get_context_data(self, **kwargs):
+        context = super(SubPageView, self).get_context_data(**kwargs)
         return context

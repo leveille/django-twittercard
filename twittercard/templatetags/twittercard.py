@@ -4,28 +4,24 @@ register = template.Library()
 
 def twittercard(context, *args, **kwargs):
     request = context['request']
-    type = kwargs.get('type', 'summary')
-
-    twittercard_site = settings.get('TWITTERCARD_SITE', None)
-    site = kwargs.get('site', twittercard_site)
-
-    twittercard_site_id = settings.get('TWITTERCARD_SITE_ID', None)
-    site_id = kwargs.get('site_id', twittercard_site_id)
-
-    twittercard_creator = settings.get('TWITTERCARD_CREATOR', None)
-    creator = kwargs.get('creator', twittercard_creator)
-
-    twittercard_creator_id = settings.get('TWITTERCARD_CREATOR_ID', None)
-    creator_id = kwargs.get('creator', twittercard_creator_id)
-
+    card = kwargs.get('card', 'summary')
     title = kwargs.get('title', None)
     description = kwargs.get('description', None)
-    url = kwargs.get('url', request.get_full_path())
+    url = kwargs.get('url', request.build_absolute_uri())
     image = kwargs.get('image', None)
     image_width = kwargs.get('image_width', None)
     image_height = kwargs.get('image_width', None)
+
+    config = getattr(settings, 'TWITTERCARD_CONFIG', None)
+    (site, site_id, creator, creator_id) = (None, None, None, None)
+    if config is not None:
+        site = kwargs.get('site', config.get('SITE', None))
+        site_id = kwargs.get('site_id', config.get('SITE_ID', None))
+        creator = kwargs.get('creator', config.get('CREATOR', None))
+        creator_id = kwargs.get('creator_id', config.get('CREATOR_ID', None))
+
     return {
-        'type': type,
+        'card': card,
         'site': site,
         'site_id': site_id,
         'creator': creator,

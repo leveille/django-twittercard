@@ -147,7 +147,9 @@ LOGGING = {
 }
 
 # https://dev.twitter.com/docs/cards
-TWITTERCARD_SITE = '@jleveille'
-TWITTERCARD_SITE_ID = 'jleveille'
-TWITTERCARD_CREATOR = '@jleveille'
-TWITTERCARD_CREATOR_ID = 'jleveille'
+TWITTERCARD_CONFIG = {
+    'SITE': '@foo',
+    'SITE_ID': 'foo',
+    'CREATOR': '@bar',
+    'CREATOR_ID': 'bar'
+}
