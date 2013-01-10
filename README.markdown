@@ -14,7 +14,7 @@ pip install -e git+git@github.com:leveille/django-twittercard.git#egg=twittercar
 ## Usage
 
 1. Add `twittercard` to your settings.py `INSTALLED_APPS` list
-2. There are a few configuration options to twittercard that can be placed in a dictionary called `TWITTERCARD_CONFIG` in settings.py.  Refer to the [Twitter Card Docs](https://dev.twitter.com/docs/cards) for help regarding [card and content attribution](https://dev.twitter.com/docs/cards#content).
+2. There are a few configuration options to twittercard that can be placed in an OPTIONAL dictionary called `TWITTERCARD_CONFIG` in settings.py.  Refer to the [Twitter Card Docs](https://dev.twitter.com/docs/cards) for help regarding [card and content attribution](https://dev.twitter.com/docs/cards#content).
 
 ```python
 TWITTERCARD_CONFIG = {
@@ -25,10 +25,10 @@ TWITTERCARD_CONFIG = {
 }
 ```
 
-* `SITE` __Not Required__: @username for the website used in the card footer.
-* `SITE_ID` __Not Required__: Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.
-* `CREATOR` __Not Required__: @username for the content creator / author.
-* `CREATOR_ID` __Not Required__: Same as twitter:creator, but the Twitter user's ID.
+* `SITE` __optional__: @username for the website used in the card footer.
+* `SITE_ID` __optional__: Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.
+* `CREATOR` __optional__: @username for the content creator / author.
+* `CREATOR_ID` __optional__: Same as twitter:creator, but the Twitter user's ID.
 
 2. Load the `twittercard` custom tags
 3. Call the `twittercard` tag, passing in the appropriate parameters
@@ -67,23 +67,23 @@ The summary card can be used for many kinds of web content, from blog posts and 
 {% twittercard card="summary" site="" site_id="" creator="" creator_id="" url="" title="" description="" image="" %}
 ```
 
-* `card` (__optional__): Defaults to summary
+* `card` __optional__: Defaults to summary
 
-* `site` (**Optional**): @username for the website used in the card footer.  Will default to `TWITTERCARD_CONFIG` if supplied.
+* `site` __optional__: @username for the website used in the card footer.  Will default to `TWITTERCARD_CONFIG` if supplied.
 
-* `site_id` (**Optional**): Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to `TWITTERCARD_CONFIG` if supplied.
+* `site_id` __optional__: Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to `TWITTERCARD_CONFIG` if supplied.
 
-* `creator` (**Optional**): @username for the content creator / author.
+* `creator` __optional__: @username for the content creator / author.
 
-* `creator_id` (**Optional**): Same as twitter:creator, but the Twitter user's ID.
+* `creator_id` __optional__: Same as twitter:creator, but the Twitter user's ID.
 
-* `url` (**Required**): Canonical URL of the card content.
+* `url` __required__: Canonical URL of the card content.
 
-* `title` (**Required**): Title should be concise and will be truncated at 70 characters.
+* `title` __required__: Title should be concise and will be truncated at 70 characters.
 
-* `description` (**Required**): A description that concisely summarizes the content of the page, as appropriate for presentation within a Tweet. Do not re-use the title text as the description, or use this field to describe the general services provided by the website. Description text will be truncated at the word to 200 characters.
+* `description` __required__: A description that concisely summarizes the content of the page, as appropriate for presentation within a Tweet. Do not re-use the title text as the description, or use this field to describe the general services provided by the website. Description text will be truncated at the word to 200 characters.
 
-* `image` (**Optional**): URL to a unique image representing the content of the page. Do not use a generic image such as your website logo, author photo, or other image that spans multiple pages. Images larger than 120x120px will be resized and cropped square based on longest dimension. Images smaller than 60x60px will not be shown.
+* `image` __optional__: URL to a unique image representing the content of the page. Do not use a generic image such as your website logo, author photo, or other image that spans multiple pages. Images larger than 120x120px will be resized and cropped square based on longest dimension. Images smaller than 60x60px will not be shown.
 
 **NOTE**: If any required fields are omitted, the card may not be shown in the Tweet.
 
@@ -95,25 +95,25 @@ The photo card puts the image front and center in the Tweet.
 {% twittercard card="photo" site="" site_id="" creator="" creator_id="" title="" description="" image="" image_width="" image_height="" %}
 ```
 
-* `card` (**Required**): Should be "photo"
+* `card` __required__: Should be "photo"
 
-* `site` (**Optional**): @username for the website used in the card footer.  Will default to `TWITTERCARD_CONFIG` if supplied.
+* `site` __optional__: @username for the website used in the card footer.  Will default to `TWITTERCARD_CONFIG` if supplied.
 
-* `site_id` (**Optional**): Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to `TWITTERCARD_CONFIG` if supplied.
+* `site_id` __optional__: Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to `TWITTERCARD_CONFIG` if supplied.
 
-* `creator` (**Optional**): @username for the content creator / author.
+* `creator` __optional__: @username for the content creator / author.
 
-* `creator_id` (**Optional**): Same as twitter:creator, but the Twitter user's ID.
+* `creator_id` __optional__: Same as twitter:creator, but the Twitter user's ID.
 
-* `title` (**Optional**): See full explanation of `title` in the Summary Card
+* `title` __optional__: See full explanation of `title` in the Summary Card
 
-* `description` (**Optional**): See full explanation of `description` in the Summary Card
+* `description` __optional__: See full explanation of `description` in the Summary Card
 
-* `image` (**Required**): A URL to the image representing the content.
+* `image` __required__: A URL to the image representing the content.
 
-* `image_width` (**Optional**): Providing width in px helps us more accurately preserve the the aspect ratio of the image when resizing.
+* `image_width` __optional__: Providing width in px helps us more accurately preserve the the aspect ratio of the image when resizing.
 
-* `image_height` (**Optional**): Providing height in px helps us more accurately preserve the the aspect ratio of the image when resizing.
+* `image_height` __optional__: Providing height in px helps us more accurately preserve the the aspect ratio of the image when resizing.
 
 ## TODO
 
