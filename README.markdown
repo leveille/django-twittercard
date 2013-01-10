@@ -7,11 +7,13 @@ Adds HTML Meta tags for Twitter Card support.
     
 ## Installation
 
-    pip install -e git+ssh://git@github.com:leveille/django-twittercard.git#egg=TwitterCard
+```
+pip install -e git+git@github.com:leveille/django-twittercard.git#egg=twittercard
+```
 
 ## Usage
 
-1. Add `twittercard` to your settings.py INSTALLED_APPS list
+1. Add `twittercard` to your settings.py `INSTALLED_APPS` list
 2. Define the following settings in settings.py.  Refer to the [Twitter Card Docs](https://dev.twitter.com/docs/cards) for help regarding [card and content attribution](https://dev.twitter.com/docs/cards#content).
 
 ```python
@@ -57,3 +59,4 @@ TWITTERCARD_CREATOR_ID = 'bar'
 1. Improve docs regarding parameters
 2. [Check for required fields based on card type](https://github.com/leveille/django-twittercard/issues/1)
 3. [Add support for player card](https://github.com/leveille/django-twittercard/issues/2)
+
