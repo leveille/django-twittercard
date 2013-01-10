@@ -85,8 +85,6 @@ The summary card can be used for many kinds of web content, from blog posts and 
 
 * `image` __optional__: URL to a unique image representing the content of the page. Do not use a generic image such as your website logo, author photo, or other image that spans multiple pages. Images larger than 120x120px will be resized and cropped square based on longest dimension. Images smaller than 60x60px will not be shown.
 
-**NOTE**: If any required fields are omitted, the card may not be shown in the Tweet.
-
 ## Photo TwitterCard
 
 The photo card puts the image front and center in the Tweet.
@@ -114,6 +112,8 @@ The photo card puts the image front and center in the Tweet.
 * `image_width` __optional__: Providing width in px helps us more accurately preserve the the aspect ratio of the image when resizing.
 
 * `image_height` __optional__: Providing height in px helps us more accurately preserve the the aspect ratio of the image when resizing.
+
+**NOTE**: If any required fields are omitted, the card may not be shown in the Tweet.
 
 ## TODO
 
