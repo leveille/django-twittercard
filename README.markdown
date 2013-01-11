@@ -68,7 +68,7 @@ The result, including the use of the `TWITTERCARD_CONFIG` options defined above,
 The summary card can be used for many kinds of web content, from blog posts and news articles, to products and restaurants.
 
 ```
-{% twittercard card="summary" site="" site_id="" creator="" creator_id="" **url=""** **title=""** **description=""** image="" %}
+{% twittercard card="summary" site="" site_id="" creator="" creator_id="" url="" title="" description="" image="" %}
 ```
 
 * `card` __optional__    
@@ -106,25 +106,35 @@ The photo card puts the image front and center in the Tweet.
 {% twittercard card="photo" site="" site_id="" creator="" creator_id="" title="" description="" image="" image_width="" image_height="" %}
 ```
 
-* `card` __required__: Should be "photo"
+* `card` __required__  
+  Should be "photo"
 
-* `site` __optional__: @username for the website used in the card footer.  Will default to `TWITTERCARD_CONFIG` if supplied.
+* `site` __optional__  
+  @username for the website used in the card footer.  Will default to `TWITTERCARD_CONFIG` if supplied.
 
-* `site_id` __optional__: Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to `TWITTERCARD_CONFIG` if supplied.
+* `site_id` __optional__  
+  Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to `TWITTERCARD_CONFIG` if supplied.
 
-* `creator` __optional__: @username for the content creator / author.
+* `creator` __optional__  
+  @username for the content creator / author.
 
-* `creator_id` __optional__: Same as twitter:creator, but the Twitter user's ID.
+* `creator_id` __optional__  
+  Same as twitter:creator, but the Twitter user's ID.
 
-* `title` __optional__: See full explanation of `title` in the Summary Card
+* `title` __optional__  
+  See full explanation of `title` in the Summary Card
 
-* `description` __optional__: See full explanation of `description` in the Summary Card
+* `description` __optional__  
+  See full explanation of `description` in the Summary Card
 
-* `image` __required__: A URL to the image representing the content.
+* `image` __required__  
+  A URL to the image representing the content.
 
-* `image_width` __optional__: Providing width in px helps us more accurately preserve the the aspect ratio of the image when resizing.
+* `image_width` __optional__  
+  Providing width in px helps us more accurately preserve the the aspect ratio of the image when resizing.
 
-* `image_height` __optional__: Providing height in px helps us more accurately preserve the the aspect ratio of the image when resizing.
+* `image_height` __optional__  
+  Providing height in px helps us more accurately preserve the the aspect ratio of the image when resizing.
 
 **NOTE**: If any required fields are omitted, the card may not be shown in the Tweet.
 
