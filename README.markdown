@@ -8,7 +8,13 @@ Adds HTML Meta tags for Twitter Card support.
 ## Installation
 
 ```
-pip install -e git+git@github.com:leveille/django-twittercard.git#egg=twittercard
+pip install -e git+git://github.com/npp/django-twittercard.git#egg=twittercard
+```
+
+## Upgrade
+
+```
+pip install -U -e git+git://github.com/npp/django-twittercard.git#egg=twittercard
 ```
 
 ## Usage
