@@ -25,13 +25,13 @@ TWITTERCARD_CONFIG = {
 }
 ```
 
-* `SITE` __optional__
+* `SITE` - __optional__    
   @username for the website used in the card footer.
-* `SITE_ID` __optional__
+* `SITE_ID` - __optional__    
   Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.
-* `CREATOR` __optional__
+* `CREATOR` - __optional__    
   @username for the content creator / author.
-* `CREATOR_ID` __optional__
+* `CREATOR_ID` - __optional__    
   Same as twitter:creator, but the Twitter user's ID.
 
 2. Load the `twittercard` custom tags
@@ -58,7 +58,7 @@ The result, including the use of the `TWITTERCARD_CONFIG` options defined above,
 <meta name="twitter:site:id" content="foo">
 <meta name="twitter:creator" content="@bar">
 <meta name="twitter:creator:id" content="bar">
-<meta name="twitter:url" content="http://localhost:8000/sub/">
+<meta name="twitter:url" content="http://url.tld/sub/">
 <meta property="twitter:title" content="Foo"/>
 <meta name="twitter:description" content="Bar">
 ```
