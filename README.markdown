@@ -31,7 +31,7 @@ TWITTERCARD_CONFIG = {
   @username for the website used in the card footer.  
 
 * `SITE_ID`: __optional__  
-  Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.
+  Same as SITE, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.
 
 * `CREATOR`: __optional__  
   @username for the content creator / author.
@@ -79,13 +79,13 @@ The [summary card](https://dev.twitter.com/docs/cards#summary-card) can be used 
 ```
 
 * `card`: __optional__  
-  Defaults to summary
+  Defaults to "summary"
 
 * `site`: __optional__  
   @username for the website used in the card footer.  Will default to TWITTERCARD_CONFIG if supplied.
 
 * `site_id`: __optional__  
-  Same as SITE, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to TWITTERCARD_CONFIG if supplied.
+  Same as site, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to TWITTERCARD_CONFIG if supplied.
 
 * `creator`: __optional__  
   @username for the content creator / author.
@@ -120,7 +120,7 @@ The [photo card](https://dev.twitter.com/docs/cards#photo-card) puts the image f
   @username for the website used in the card footer.  Will default to TWITTERCARD_CONFIG if supplied.
 
 * `site_id`: __optional__  
-  Same as SITE, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to TWITTERCARD_CONFIG if supplied.
+  Same as site, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to TWITTERCARD_CONFIG if supplied.
 
 * `creator`: __optional__  
   @username for the content creator / author.
