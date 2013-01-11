@@ -76,15 +76,15 @@ Same as twitter:creator, but the Twitter user's ID.</p></li>
 </ul><h3>Loading Template Tags</h3>
 
 <ol>
-<li>Load the twittercard custom tags</li>
-<li>Call the twittercard tag, passing in the appropriate parameters</li>
+<li>Load the <code>twittercard</code> custom tags</li>
+<li>Call the <code>twittercard_summary</code> or <code>twittercard_photo</code> tag, passing in the appropriate parameters</li>
 </ol><div class="highlight"><pre>{% load twittercard %}
 <span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
     <span class="nt">&lt;head&gt;</span>
         <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;title&gt;</span>Django TwitterCard Example<span class="nt">&lt;/title&gt;</span>
-        {% twittercard title="Foo" description="Bar" %}
+        {% twittercard_summary title="Foo" description="Bar" %}
     <span class="nt">&lt;/head&gt;</span>
     <span class="nt">&lt;body&gt;&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
@@ -98,7 +98,7 @@ Same as twitter:creator, but the Twitter user's ID.</p></li>
 <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:creator"</span> <span class="na">content=</span><span class="s">"@bar"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:creator:id"</span> <span class="na">content=</span><span class="s">"bar"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:url"</span> <span class="na">content=</span><span class="s">"http://url.tld/sub/"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"twitter:title"</span> <span class="na">content=</span><span class="s">"Foo"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:title"</span> <span class="na">content=</span><span class="s">"Foo"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:description"</span> <span class="na">content=</span><span class="s">"Bar"</span><span class="nt">&gt;</span>
 </pre></div>
 
@@ -106,12 +106,10 @@ Same as twitter:creator, but the Twitter user's ID.</p></li>
 
 <p>The <a href="https://dev.twitter.com/docs/cards#summary-card">summary card</a> can be used for many kinds of web content, from blog posts and news articles, to products and restaurants.</p>
 
-<pre><code>{% twittercard card="summary" site="" site_id="" creator="" creator_id="" url="" title="" description="" image="" %}
+<pre><code>{% twittercard_summary site="" site_id="" creator="" creator_id="" url="" title="" description="" image="" %}
 </code></pre>
 
 <ul>
-<li><p><code>card</code>: <strong>optional</strong><br>
-Defaults to "summary"</p></li>
 <li><p><code>site</code>: <strong>optional</strong><br>
 <a href="https://github.com/username" class="user-mention">@username</a> for the website used in the card footer.  Will default to TWITTERCARD_CONFIG if supplied.</p></li>
 <li><p><code>site_id</code>: <strong>optional</strong><br>
@@ -121,7 +119,7 @@ Same as site, but the website's Twitter user ID instead. Note that user ids neve
 <li><p><code>creator_id</code>: <strong>optional</strong><br>
 Same as twitter:creator, but the Twitter user's ID.</p></li>
 <li><p><code>url</code>: <strong>required if not in OpenGraph</strong><br>
-Canonical URL of the card content.</p></li>
+Will default to the current page URL.  Canonical URL of the card content.</p></li>
 <li><p><code>title</code>: <strong>required if not in OpenGraph</strong><br>
 Title should be concise and will be truncated at 70 characters.</p></li>
 <li><p><code>description</code>: <strong>required if not in OpenGraph</strong><br>
@@ -132,12 +130,10 @@ URL to a unique image representing the content of the page. Do not use a generic
 
 <p>The <a href="https://dev.twitter.com/docs/cards#photo-card">photo card</a> puts the image front and center in the Tweet.</p>
 
-<pre><code>{% twittercard card="photo" site="" site_id="" creator="" creator_id="" title="" description="" image="" image_width="" image_height="" %}
+<pre><code>{% twittercard_photo site="" site_id="" creator="" creator_id="" title="" description="" image="" image_width="" image_height="" %}
 </code></pre>
 
 <ul>
-<li><p><code>card</code>: <strong>required</strong><br>
-Should be "photo"</p></li>
 <li><p><code>site</code>: <strong>optional</strong><br>
 <a href="https://github.com/username" class="user-mention">@username</a> for the website used in the card footer.  Will default to TWITTERCARD_CONFIG if supplied.</p></li>
 <li><p><code>site_id</code>: <strong>optional</strong><br>
