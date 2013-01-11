@@ -68,26 +68,35 @@ The result, including the use of the `TWITTERCARD_CONFIG` options defined above,
 The summary card can be used for many kinds of web content, from blog posts and news articles, to products and restaurants.
 
 ```
-{% twittercard card="summary" site="" site_id="" creator="" creator_id="" url="" title="" description="" image="" %}
+{% twittercard card="summary" site="" site_id="" creator="" creator_id="" **url=""** **title=""** **description=""** image="" %}
 ```
 
-* `card` __optional__: Defaults to summary
-
-* `site` __optional__: @username for the website used in the card footer.  Will default to `TWITTERCARD_CONFIG` if supplied.
-
-* `site_id` __optional__: Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to `TWITTERCARD_CONFIG` if supplied.
-
-* `creator` __optional__: @username for the content creator / author.
-
-* `creator_id` __optional__: Same as twitter:creator, but the Twitter user's ID.
-
-* `url` __required__: Canonical URL of the card content.
-
-* `title` __required__: Title should be concise and will be truncated at 70 characters.
-
-* `description` __required__: A description that concisely summarizes the content of the page, as appropriate for presentation within a Tweet. Do not re-use the title text as the description, or use this field to describe the general services provided by the website. Description text will be truncated at the word to 200 characters.
-
-* `image` __optional__: URL to a unique image representing the content of the page. Do not use a generic image such as your website logo, author photo, or other image that spans multiple pages. Images larger than 120x120px will be resized and cropped square based on longest dimension. Images smaller than 60x60px will not be shown.
+* `card` __optional__    
+  Defaults to summary
+  
+* `site` __optional__    
+  @username for the website used in the card footer.  Will default to `TWITTERCARD_CONFIG` if supplied.
+  
+* `site_id` __optional__    
+  Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to `TWITTERCARD_CONFIG` if supplied.
+  
+* `creator` __optional__    
+  @username for the content creator / author.
+  
+* `creator_id` __optional__    
+  Same as twitter:creator, but the Twitter user's ID.
+  
+* `url` __required__    
+  Canonical URL of the card content.
+  
+* `title` __required__  
+  Title should be concise and will be truncated at 70 characters.
+  
+* `description` __required__  
+  A description that concisely summarizes the content of the page, as appropriate for presentation within a Tweet. Do not re-use the title text as the description, or use this field to describe the general services provided by the website. Description text will be truncated at the word to 200 characters.
+  
+* `image` __optional__
+  URL to a unique image representing the content of the page. Do not use a generic image such as your website logo, author photo, or other image that spans multiple pages. Images larger than 120x120px will be resized and cropped square based on longest dimension. Images smaller than 60x60px will not be shown.
 
 ## Photo TwitterCard
 
