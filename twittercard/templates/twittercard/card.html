@@ -4,7 +4,7 @@
 {% if creator %}<meta name="twitter:creator" content="{{ creator }}">{% endif %}
 {% if creator_id %}<meta name="twitter:creator:id" content="{{ creator_id }}">{% endif %}
 {% if url %}<meta name="twitter:url" content="{{ url }}">{% endif %}
-{% if title %}<meta property="twitter:title" content="{{ title|striptags|slice:'70' }}"/>{% endif %}
+{% if title %}<meta name="twitter:title" content="{{ title|striptags|slice:'70' }}"/>{% endif %}
 {% if description %}<meta name="twitter:description" content="{{ description|striptags|slice:'200' }}">{% endif %}
 {% if image %}<meta property="twitter:image" content="{{ image }}">{% endif %}
 {% if image_width %}<meta property="twitter:image:width" content="{{ image_width }}">{% endif %}
