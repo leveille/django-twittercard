@@ -65,7 +65,7 @@ The result, including the use of the `TWITTERCARD_CONFIG` options defined above,
 
 ## Summary TwitterCard
 
-The summary card can be used for many kinds of web content, from blog posts and news articles, to products and restaurants.
+The [summary card](https://dev.twitter.com/docs/cards#summary-card) can be used for many kinds of web content, from blog posts and news articles, to products and restaurants.
 
 ```
 {% twittercard card="summary" site="" site_id="" creator="" creator_id="" url="" title="" description="" image="" %}
@@ -100,7 +100,7 @@ The summary card can be used for many kinds of web content, from blog posts and 
 
 ## Photo TwitterCard
 
-The photo card puts the image front and center in the Tweet.
+The [photo card](https://dev.twitter.com/docs/cards#photo-card) puts the image front and center in the Tweet.
 
 ```
 {% twittercard card="photo" site="" site_id="" creator="" creator_id="" title="" description="" image="" image_width="" image_height="" %}
