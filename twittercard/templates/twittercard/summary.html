@@ -1,0 +1,5 @@
+{% extends 'twittercard/base.html' %}
+{% block card %}
+{{ block.super }}
+{% if url %}<meta name="twitter:url" content="{{ url }}">{% endif %}
+{% endblock %}

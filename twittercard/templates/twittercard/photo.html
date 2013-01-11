@@ -1,0 +1,6 @@
+{% extends 'twittercard/base.html' %}
+{% block card %}
+{{ block.super }}
+{% if image_width %}<meta name="twitter:image:width" content="{{ image_width }}">{% endif %}
+{% if image_height %}<meta name="twitter:image:height" content="{{ image_height }}">{% endif %}
+{% endblock %}

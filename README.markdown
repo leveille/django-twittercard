@@ -41,8 +41,8 @@ TWITTERCARD_CONFIG = {
 
 ### Loading Template Tags
 
-1. Load the twittercard custom tags
-2. Call the twittercard tag, passing in the appropriate parameters
+1. Load the `twittercard` custom tags
+2. Call the `twittercard_summary` or `twittercard_photo` tag, passing in the appropriate parameters
 
 ```html
 {% load twittercard %}
@@ -51,7 +51,7 @@ TWITTERCARD_CONFIG = {
     <head>
         <meta charset="utf-8">
         <title>Django TwitterCard Example</title>
-        {% twittercard title="Foo" description="Bar" %}
+        {% twittercard_summary title="Foo" description="Bar" %}
     </head>
     <body></body>
 </html>
@@ -66,7 +66,7 @@ The result, including the use of the TWITTERCARD_CONFIG options defined above, w
 <meta name="twitter:creator" content="@bar">
 <meta name="twitter:creator:id" content="bar">
 <meta name="twitter:url" content="http://url.tld/sub/">
-<meta property="twitter:title" content="Foo"/>
+<meta name="twitter:title" content="Foo"/>
 <meta name="twitter:description" content="Bar">
 ```
 
@@ -75,11 +75,8 @@ The result, including the use of the TWITTERCARD_CONFIG options defined above, w
 The [summary card](https://dev.twitter.com/docs/cards#summary-card) can be used for many kinds of web content, from blog posts and news articles, to products and restaurants.
 
 ```
-{% twittercard card="summary" site="" site_id="" creator="" creator_id="" url="" title="" description="" image="" %}
+{% twittercard_summary site="" site_id="" creator="" creator_id="" url="" title="" description="" image="" %}
 ```
-
-* `card`: __optional__  
-  Defaults to "summary"
 
 * `site`: __optional__  
   @username for the website used in the card footer.  Will default to TWITTERCARD_CONFIG if supplied.
@@ -94,7 +91,7 @@ The [summary card](https://dev.twitter.com/docs/cards#summary-card) can be used 
   Same as twitter:creator, but the Twitter user's ID.
 
 * `url`: __required if not in OpenGraph__  
-  Canonical URL of the card content.
+  Will default to the current page URL.  Canonical URL of the card content.
 
 * `title`: __required if not in OpenGraph__  
   Title should be concise and will be truncated at 70 characters.
@@ -110,11 +107,8 @@ The [summary card](https://dev.twitter.com/docs/cards#summary-card) can be used 
 The [photo card](https://dev.twitter.com/docs/cards#photo-card) puts the image front and center in the Tweet.
 
 ```
-{% twittercard card="photo" site="" site_id="" creator="" creator_id="" title="" description="" image="" image_width="" image_height="" %}
+{% twittercard_photo site="" site_id="" creator="" creator_id="" title="" description="" image="" image_width="" image_height="" %}
 ```
-
-* `card`: __required__  
-  Should be "photo"
 
 * `site`: __optional__  
   @username for the website used in the card footer.  Will default to TWITTERCARD_CONFIG if supplied.
