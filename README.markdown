@@ -25,10 +25,14 @@ TWITTERCARD_CONFIG = {
 }
 ```
 
-* `SITE` __optional__: @username for the website used in the card footer.
-* `SITE_ID` __optional__: Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.
-* `CREATOR` __optional__: @username for the content creator / author.
-* `CREATOR_ID` __optional__: Same as twitter:creator, but the Twitter user's ID.
+* `SITE` __optional__
+  @username for the website used in the card footer.
+* `SITE_ID` __optional__
+  Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.
+* `CREATOR` __optional__
+  @username for the content creator / author.
+* `CREATOR_ID` __optional__
+  Same as twitter:creator, but the Twitter user's ID.
 
 2. Load the `twittercard` custom tags
 3. Call the `twittercard` tag, passing in the appropriate parameters
