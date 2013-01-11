@@ -1,4 +1,4 @@
-# Twitter Cards App for Django
+# Twitter Cards App for Django >= 1.4
 
 Adds HTML Meta tags for Twitter Card support.
 
