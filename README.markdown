@@ -15,8 +15,8 @@ pip install -e git+git@github.com:leveille/django-twittercard.git#egg=twittercar
 
 ### Optional Configuration
 
-1. Add `twittercard` to your settings.py `INSTALLED_APPS` list
-2. There are a few configuration options to twittercard that can be placed in an OPTIONAL dictionary called `TWITTERCARD_CONFIG` in settings.py.  Refer to the [Twitter Card Docs](https://dev.twitter.com/docs/cards) for help regarding [card and content attribution](https://dev.twitter.com/docs/cards#content).
+1. Add twittercard to your settings.py INSTALLED_APPS list
+2. There are a few configuration options to twittercard that can be placed in an OPTIONAL dictionary called TWITTERCARD_CONFIG in settings.py.  Refer to the [Twitter Card Docs](https://dev.twitter.com/docs/cards) for help regarding [card and content attribution](https://dev.twitter.com/docs/cards#content).
 
 ```python
 TWITTERCARD_CONFIG = {
@@ -41,8 +41,8 @@ TWITTERCARD_CONFIG = {
 
 ### Loading Template Tags
 
-1. Load the `twittercard` custom tags
-2. Call the `twittercard` tag, passing in the appropriate parameters
+1. Load the twittercard custom tags
+2. Call the twittercard tag, passing in the appropriate parameters
 
 ```html
 {% load twittercard %}
@@ -57,7 +57,7 @@ TWITTERCARD_CONFIG = {
 </html>
 ```
 
-The result, including the use of the `TWITTERCARD_CONFIG` options defined above, would be:
+The result, including the use of the TWITTERCARD_CONFIG options defined above, would be:
 
 ```html
 <meta name="twitter:card" content="summary">
@@ -82,10 +82,10 @@ The [summary card](https://dev.twitter.com/docs/cards#summary-card) can be used 
   Defaults to summary
 
 * `site`: __optional__  
-  @username for the website used in the card footer.  Will default to `TWITTERCARD_CONFIG` if supplied.
+  @username for the website used in the card footer.  Will default to TWITTERCARD_CONFIG if supplied.
 
 * `site_id`: __optional__  
-  Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to `TWITTERCARD_CONFIG` if supplied.
+  Same as SITE, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to TWITTERCARD_CONFIG if supplied.
 
 * `creator`: __optional__  
   @username for the content creator / author.
@@ -117,10 +117,10 @@ The [photo card](https://dev.twitter.com/docs/cards#photo-card) puts the image f
   Should be "photo"
 
 * `site`: __optional__  
-  @username for the website used in the card footer.  Will default to `TWITTERCARD_CONFIG` if supplied.
+  @username for the website used in the card footer.  Will default to TWITTERCARD_CONFIG if supplied.
 
 * `site_id`: __optional__  
-  Same as `SITE`, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to `TWITTERCARD_CONFIG` if supplied.
+  Same as SITE, but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.  Will default to TWITTERCARD_CONFIG if supplied.
 
 * `creator`: __optional__  
   @username for the content creator / author.
@@ -129,10 +129,10 @@ The [photo card](https://dev.twitter.com/docs/cards#photo-card) puts the image f
   Same as twitter:creator, but the Twitter user's ID.
 
 * `title`: __optional__  
-  Will fallback to *OpenGraph title* if available.  See full explanation of `title` in the Summary Card.
+  Will fallback to *OpenGraph title* if available.  See full explanation of title in the Summary Card.
 
 * `description`: __optional__  
-  Will fallback to *OpenGraph description* if available.  See full explanation of `description` in the Summary Card.
+  Will fallback to *OpenGraph description* if available.  See full explanation of description in the Summary Card.
 
 * `image`: __required if not in OpenGraph__  
   A URL to the image representing the content.
